@@ -7,14 +7,16 @@ import org.mbtlab.hudson.controller.myController;
 
 public class myControllerTest {
 	@Test
-	public void testHead(){		
-		assertEquals("index.jsp",new myController().head());
+	public void testHead(){	
+		String result = new myController().head();
+		assertEquals("index.jsp",result);
 	}
 	
 	@Test
 	public void testIndex(){
 		try {
-			assertEquals("index.jsp",new myController().index(null));
+			String result = new myController().index(null);
+			assertEquals("index.jsp",result);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
